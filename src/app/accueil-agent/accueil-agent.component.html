@@ -1,0 +1,88 @@
+
+<div class="ligne">
+    <div id="note">
+        <h4>NOTE INTERNE</h4>
+        <p><em>NOM - DATE</em></p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non repellendus totam recusandae similique magni impedit magnam ratione nisi, a optio at error excepturi id! Perspiciatis dolorum officia ut! Aliquam, nisi?</p>
+    </div><br>
+
+    <div id="ajouter">
+        <div>
+            <img [src]="urlImageAddLogement" alt="ajouter un logement" width ="75px" height="75px">
+            <p>Ajouter un logement</p>
+        </div>
+        <div>
+            <img [src]="urlImageAddLocataire" alt="ajouter un locataire" width ="75px" height="75px">
+            <p>Ajouter un locataire/propriétaire</p>
+        </div>
+        <div>
+            <img [src]="urlImageAddIntervention" alt="ajouter une inervention" width ="75px" height="75px">
+            <p>Déclarer un sinistre</p>
+        </div>
+        <div>
+            <img [src]="urlImageAddPdf" alt="ajouter un pdf" width ="75px" height="75px">
+            <p>Ajouter un document</p>
+        </div>
+    </div>
+
+    <div id="interventions">
+        <h4>DEMANDES D'INTERVENTION</h4>
+        <br>
+        <div class="niveau">
+            <span class="dot" id="normal"></span>
+            <p>Normal [0]</p><br>
+        </div>
+        <div class="niveau">
+            <span class="dot" id="eleve"></span>
+            <p>Elevé [0]</p><br>
+        </div>
+        <div class="niveau">
+            <span class="dot" id="critique"></span>
+            <p>Critique [0]</p><br>
+        </div>
+    </div><br>
+</div><br>
+<div class="ligne">
+    <div id="tauxoccupation">
+        <h4>TAUX D'OCCUPATION</h4>
+        <br>
+        <div class="niveau">
+            <span class="dot" id="occupe"></span>
+            <p>Loués</p><br>
+        </div>
+        <div class="barregrise">
+            <div class="barreverte" id="tauxoccupe"></div>
+        </div><br>
+        <div class="niveau">
+            <span class="dot" id="eleve"></span>
+            <p>En cours de location</p><br>
+        </div>
+        <div class="barregrise">
+            <div class="barreverte" id="tauxencours"></div>
+        </div><br>
+        <div class="niveau">
+            <span class="dot" id="vide"></span>
+            <p>Vides</p><br>
+        </div>
+        <div class="barregrise">
+            <div class="barreverte" id="tauxvide"></div>
+        </div><br>
+
+    </div>
+    <div id="planning">
+        <h4>PLANNING</h4>
+        <button (click)="expanded = !expanded">Voir/Cacher planning</button>
+        <full-calendar *ngIf="expanded"  [options]="calendarOptions" id="calendar"></full-calendar>
+    </div>
+    <div id="impayes">
+        <h4>IMPAYES</h4><br>
+        <div class="niveau">
+            <span class="dot" id="eleve"></span>
+            <p>Retard 1 à 4 jours [0]</p><br>
+        </div>
+        <div class="niveau">
+            <span class="dot" id="critique"></span>
+            <p>Retard 5 jours et plus [0]</p><br>
+        </div>
+    </div>
+</div>

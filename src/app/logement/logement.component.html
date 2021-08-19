@@ -1,0 +1,103 @@
+<table id="logement">
+    <thead>
+        <td>Etat</td>
+        <td>Date dispo</td>
+        <td>Unité</td>
+        <td>Surface</td>
+        <td>Etage</td>
+        <td>Pers.</td>
+        <td>Ville</td>
+        <td>Quartier</td>
+        <td>Rue</td>
+        <td>CP</td>
+        <td>Loyer</td>
+        <td>Charges</td>
+        <td>Total</td>
+        <td>Locataire</td>
+        <td>Propriétaire</td>
+    </thead>
+    <tbody>
+        <tr>
+            <td *ngIf="logement.occupe" width="1%">
+                <div class="dot" id="occupe"></div>
+            </td>
+            <td *ngIf="!logement.occupe" width="2%">
+                <div class="dot" id="nonoccupe"></div>
+            </td>
+            <td>{{logement.locataire.dateSortie}}</td>
+            <td width="2%">{{logement.typeLogement}}</td>
+            <td width="2%">{{logement.surface}} m²</td>
+            <td width="2%">{{logement.etage}}</td>
+            <td width="2%">{{logement.locataire.nbPersonnes}}</td>
+            <td>{{logement.ville}}</td>
+            <td>{{logement.quartier}}</td>
+            <td>{{logement.adresse}}</td>
+            <td width="2%">{{logement.codePostal}}</td>
+            <td width="2%">{{logement.loyer}}</td>
+            <td width="2%">{{logement.sommeCharges}}</td>
+            <td width="2%">{{logement.total}}</td>
+            <td *ngIf="logement.locataire.sexe === 'Homme'" style="color: blue;">{{logement.locataire.prenom}} {{logement.locataire.nom}}</td>
+            <td *ngIf="logement.locataire.sexe === 'Femme'" style="color: rgb(255, 151, 168);">{{logement.locataire.prenom}} {{logement.locataire.nom}}</td>
+            <td *ngIf="logement.proprietaire.sexe === 'Homme'" style="color: blue;">{{logement.proprietaire.prenom}} {{logement.proprietaire.nom}}</td>
+            <td *ngIf="logement.proprietaire.sexe === 'Femme'" style="color: rgb(255, 151, 168);">{{logement.proprietaire.prenom}} {{logement.proprietaire.nom}}</td>
+        </tr>
+    </tbody>
+</table>
+
+<div class="ligne">
+    <table id="listePieces">
+        <thead>
+            <td>Désignation</td>
+            <td>Surface</td>
+            <td>Remarque</td>
+        </thead>
+        <tbody>
+            <tr *ngFor="let piece of logement.listePiece">
+                <td>{{piece.designation}}</td>
+                <td>{{piece.surface}} m²</td>
+                <td>{{piece.remarque}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div id="cle">
+        <img [src]="urlLogoCle" alt="Logo clés" width="150px" height="150px">
+        <ul>
+            <li>Double des clés</li>
+            <li>Clé de la cave</li>
+        </ul>
+    </div>
+</div>
+<div class="ligne">
+    <div class="photo">Photo</div>
+    <div class="photo">Photo</div>
+    <div class="photo">Photo</div>
+    <div class="photo">Photo</div>
+</div>
+
+<div class="ligne">
+    <div id="documents">
+        <p class="titre">Documents</p>
+        <ul>
+            <li (click)='getDashboard(logement.id)' >Dashboards</li>
+            <li>Interventions Techniques</li>
+            <li>Mandat de gestion/simple</li>
+            <li>Acte d'achat notarié</li>
+            <li>CPE</li>
+            <li>Règlement intérieur</li>
+            <li>Annonce</li>
+            <li>Photos-Visite virtuelle 3D-Vidéo</li>
+            <li>Plan</li>
+        </ul>
+    </div>
+    <div id="contrats">
+        <p class="titre">Contrats fournisseurs</p>
+        <ul>
+            <li>Assurance</li>
+            <li>Nettoyage</li>
+            <li>Entrée/Sortie des poubelles</li>
+            <li>Electricité</li>
+            <li>Eau</li>
+        </ul>
+    </div>
+</div>

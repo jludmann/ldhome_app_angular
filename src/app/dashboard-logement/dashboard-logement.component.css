@@ -1,0 +1,22 @@
+p {
+    font-family: 'Great Vibes';
+    color: #8c41f9;
+    width: fit-content;
+    font-size: 5em;
+}
+
+.titre {
+    font-size: 2em;
+    margin: auto;
+}
+
+#charts {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#chart {
+    display: flex;
+    flex-direction: column;
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="monespace">Mon Espace</p>
+
+
+        <div id="conteneur">
+            <carousel
+                arrowsTheme="dark"
+                [width] = 500
+                [height] = 300
+                [cellsToShow] = 1
+                [overflowCellsLimit] = 1
+                [pauseOnHover] = false
+                [loop] = true
+                [autoplay] = true
+                [autoplayInterval] = 5000 
+                transitionTimingFunction = "linear"
+                [transitionDuration] = 1500
+               >
+                <div class="carousel-cell">
+                    <img [src]="urlImage1" alt="Photo d'un bureau" width="500px" height="300px">
+                </div>
+                <div class="carousel-cell">
+                    <img [src]="urlImage2" alt="Photo du Luxembourg" width="500px" height="300px">
+                </div>
+                <div class="carousel-cell">
+                    <img [src]="urlImage3" alt="Photo d'un bureau" width="500px" height="300px">
+                </div>
+                <div class="carousel-cell">
+                    <img [src]="urlImage4" alt="Photo d'un bureau" width="500px" height="300px">
+                </div>
+            </carousel>
+            <div id="sous-conteneur">
+                <h2>Identifiez-vous</h2>
+                
+                
+                <form id="formulaire" (ngSubmit)="onSubmit()" [formGroup]="loginForm">
+                    <label for="mail">Identifiant : </label>
+                    <input type="email" formControlName= "mail" name="mail" required id="mail" placeholder="Adresse mail"><br>
+                    <label for="password">Mot de passe : </label>
+                    <input type="password" formControlName="password" required name="password" id="password" placeholder="Mot de passe" [routerLink]=url><br>
+                    <button type="submit" [disabled]="loading">LOGIN</button>
+                </form>
+            </div>
+        </div>
+        <footer>
+            <h4>SUIVEZ-NOUS</h4>
+            <br>
+            <p>Pour être informé de toutes les actualités et offres de votre agence LD Home <br>
+            </p>
+            <br>
+            <p>
+                <a href="https://fr-fr.facebook.com/LD-Home-341325185907653/">
+                    <img [src]="urlLogoFb" alt="logo Facebook" width = "50px" height = "50px">
+                </a>
+                <a href="https://www.linkedin.com/in/ld-home-7aa123211/?originalSubdomain=lu">
+                    <img [src]="urlLogoLinkedin" alt="logo Linkedin" width = "50px" height = "50px">
+                </a>
+                <a href="https://www.instagram.com/ldhome.lu/">
+                    <img [src]="urlLogoInsta" alt="logo instagram" width = "50px" height = "50px">
+                </a>    
+            </p>
+        </footer>
+</body>
+</html>
+        
+        

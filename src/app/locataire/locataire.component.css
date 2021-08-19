@@ -1,0 +1,128 @@
+thead {
+    background-color: #4f6bf3;
+}
+
+thead td {
+    border: solid 2px #4f6bf3;
+}
+
+td {
+    text-align: center;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: auto;
+}
+
+.dot {
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    margin: auto;
+}
+
+#occupe {
+    background-color: green;
+}
+
+#nonoccupe {
+    background-color: red;
+}
+
+.titre {
+    font-family: 'Great Vibes';
+    color: #8c41f9;
+    font-size: 3em;
+    margin: auto;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    width: 33.33%;
+}
+
+.info div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.date {
+    justify-content: space-around !important;
+}
+
+.info img {
+    margin: auto;
+}
+
+.info div p:first-child {
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+#infos {
+    display: flex;
+    flex-direction: row;
+}
+
+p, li{
+    font-family: 'Alice-Regular';
+    color: #242d5c;
+}
+
+#photoProfil {
+    margin: auto;
+}
+
+#residence {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#residence div {
+    display: flex;
+    flex-direction: column;
+}
+
+#residence .titre {
+    margin: 0;
+}
+
+ul {
+    border-style: double;
+    border-width: 5px;
+    border-color: #2998db;
+}
+
+li {
+    font-size: large;
+}
+
+#caution {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: auto;
+}
+
+#caution .titre {
+    margin: auto;
+}
+
+
+
+#agence {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#depotdegarantie {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}

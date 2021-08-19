@@ -1,0 +1,86 @@
+<table mat-table [dataSource]="listeLogement" matSort class="mat-elevation-z8">
+    <ng-container matColumnDef="occupe">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Etat</th>
+        <tr mat-cell *matCellDef="let logement">
+            <div class="dot" *ngIf="logement.occupe">
+                <span id="occupe"></span>
+            </div>
+            <div class="dot" *ngIf="!logement.occupe">
+                <span id="nonoccupe"></span>
+            </div>
+        </tr>
+    </ng-container>
+    <ng-container matColumnDef="dateSortie">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Date dispo</th>
+        <tr mat-cell *matCellDef="let logement">
+            <ng-container *ngIf="logement.locataire != null; else defaultValue">
+                {{logement.locataire.dateSortie}}
+            </ng-container>
+            <ng-template #defaultValue>Vide</ng-template>
+        </tr>
+    </ng-container>
+    <ng-container matColumnDef="typeLogement">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Unité</th>
+        <tr mat-cell *matCellDef="let logement">{{logement.typeLogement}}</tr>
+    </ng-container>
+    <ng-container matColumnDef="surface">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Surface</th>
+        <tr mat-cell *matCellDef="let logement">{{logement.surface}} m²</tr>
+    </ng-container>
+    <ng-container matColumnDef="etage">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Etage</th>
+        <tr mat-cell *matCellDef="let logement">{{logement.etage}}</tr>
+    </ng-container>
+    <ng-container matColumnDef="nbPersonnes">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Pers.</th>
+        <tr mat-cell *matCellDef="let logement">
+            <ng-container *ngIf="logement.locataire != null; else defaultValue">
+                {{logement.locataire.nbPersonnes}}
+            </ng-container>
+            <ng-template #defaultValue>Vide</ng-template>
+        </tr>
+    </ng-container>
+    <ng-container matColumnDef="ville">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Ville</th>
+        <tr mat-cell *matCellDef="let logement">{{logement.ville}}</tr>
+    </ng-container>
+    <ng-container matColumnDef="quartier">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Quartier</th>
+        <tr mat-cell *matCellDef="let logement">{{logement.quartier}}</tr>
+    </ng-container>
+    <ng-container matColumnDef="adresse">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Rue</th>
+        <tr mat-cell *matCellDef="let logement">{{logement.adresse}}</tr>
+    </ng-container>
+    <ng-container matColumnDef="codePostal">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>CP</th>
+        <tr mat-cell *matCellDef="let logement">{{logement.codePostal}}</tr>
+    </ng-container>
+    <ng-container matColumnDef="loyer">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Loyer</th>
+        <tr mat-cell *matCellDef="let logement">{{logement.loyer}}</tr>
+    </ng-container>
+    <ng-container matColumnDef="sommeCharges">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Charges</th>
+        <tr mat-cell *matCellDef="let logement">{{logement.sommeCharges}}</tr>
+    </ng-container>
+    <ng-container matColumnDef="total">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Total</th>
+        <tr mat-cell *matCellDef="let logement">{{logement.total}}</tr>
+    </ng-container>
+    <ng-container matColumnDef="locataire.nom">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Locataire</th>
+        <tr mat-cell *matCellDef="let logement">
+            <ng-container *ngIf="logement.locataire != null; else defaultValue">
+                {{logement.locataire.nom + " " + logement.locataire.prenom}}
+            </ng-container>
+            <ng-template #defaultValue>Vide</ng-template>
+        </tr>
+    </ng-container>
+    <ng-container matColumnDef="proprietaire.nom">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Propriétaire</th>
+        <tr mat-cell *matCellDef="let logement">{{logement.proprietaire.nom + " " + logement.proprietaire.prenom}}</tr>
+    </ng-container>
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>

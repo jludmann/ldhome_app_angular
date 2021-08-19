@@ -1,0 +1,26 @@
+<carousel
+    arrowsTheme="dark"
+    [width] = 500
+    [height] = 300
+    [cellsToShow] = 1
+    [overflowCellsLimit] = 1
+    [pauseOnHover] = false
+    [loop] = true
+    [autoplay] = true
+    [autoplayInterval] = 5000 
+    transitionTimingFunction = "linear"
+    [transitionDuration] = 1500
+    >
+    <div class="carousel-cell">
+        <img [src]="urlImage1" alt="Photo d'un bureau" width="500px" height="300px">
+    </div>
+    <div class="carousel-cell">
+        <img [src]="urlImage2" alt="Photo du Luxembourg" width="500px" height="300px">
+    </div>
+    <div class="carousel-cell">
+        <img [src]="urlImage3" alt="Photo d'un bureau" width="500px" height="300px">
+    </div>
+    <div class="carousel-cell">
+        <img [src]="urlImage4" alt="Photo d'un bureau" width="500px" height="300px">
+    </div>
+</carousel>

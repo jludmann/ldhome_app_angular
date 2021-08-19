@@ -1,0 +1,99 @@
+footer {
+    color: #242d5c;
+    margin-top: 2em;
+}
+
+#monespace {
+    font-family: 'Great Vibes';
+    width: fit-content;
+    margin: auto;
+    color: #242d5c;
+    font-size: 3em;
+}
+
+h2, h4, p, label, button {
+    font-family: "Alice-Regular";
+}
+
+h2 {
+    color: #242d5c;
+}
+
+label {
+    color: #242d5c;
+    font-style: italic;
+}
+
+button {
+
+    background-color: #242d5c;
+    color: white;
+    max-width: 50%;
+    margin: auto;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+h4 , p {
+    clear: both;
+    width: fit-content;
+    margin: auto;
+}
+
+h4 {
+    font-size: 1.3em;
+}
+
+p {
+    font-size: 1em;
+}
+
+#conteneur {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: fit-content;
+    margin: auto auto auto 20%;
+}
+
+#sous-conteneur {
+    display: flex;
+    flex-direction: column;
+    margin-right: auto;
+    margin-left: 100px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    color: #242d5c;
+}
+
+.carousel-cell img {
+    max-width: 100%;
+    height: auto;
+}
+
+@media screen and (max-width: 1024px){
+    #sous-conteneur {
+        margin-left: 25px;
+    }
+
+    p {
+        margin-top: 5px;
+        text-align: center;
+    }
+
+    h4 {
+        margin-top: 0;
+    }
+    
+}
+
+@media screen and (max-width: 737px) {
+    #sous-conteneur {
+        margin-left: auto;
+    }
+}

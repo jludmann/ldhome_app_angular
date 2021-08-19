@@ -1,0 +1,159 @@
+@font-face {
+    font-family: "Alice-Regular";
+    src: url('Alice-Regular-webfont.eot');
+	src: url('Alice-Regular-webfont.eot?iefix') format('eot'),
+	     url('Alice-Regular-webfont.woff') format('woff'),
+	     url('Alice-Regular-webfont.ttf') format('truetype'),
+	     url('Alice-Regular-webfont.svg#webfont') format('svg');
+}
+
+@font-face {
+    font-family: "Great Vibes";
+    src: url('GreatVibes-Regular.ttf');
+}
+
+
+#ldhome {
+    font-family: "Alice-Regular";
+    width: fit-content;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: #242d5c;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 3em;
+}
+
+#realestate {
+    font-family: "Great Vibes";
+    width: fit-content;
+    margin-top: -17.5px;
+    color: #242d5c;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 2em;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#all_ldhome {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    margin-left: 45%;
+}
+
+header img:hover {
+    cursor: pointer;
+}
+
+header img {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#deco_contact {
+    display: flex;
+    flex-direction: row;
+    margin-left: 30%;
+}
+
+#deco_contact img:hover, #nbconnectes p:hover, #nbconnectes span:hover {
+    cursor: pointer;
+}
+
+.dot {
+    height: 25px;
+    width: 25px;;
+    border-radius: 50%;
+    display: flex;
+    gap: 50px;
+}
+
+#normal {
+    background-color: green;
+}
+
+#nbconnectes {
+    display:flex;
+    flex-direction: row;
+    width: 150px;
+}
+
+#nbconnectes p {
+    margin-top: 2.5px;
+    margin-left: 20px;   
+    font-family: "Alice-Regular";
+    color: #242d5c;
+}
+
+#menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.icone {
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.icone :not(:last-child) {
+    padding-right: 50px;
+}
+
+.icone p {
+    max-width: 75px;
+    margin: auto;
+    font-family: 'Alice-Regular';
+    font-size: 1em;
+    font-style: italic;
+    text-align: center;
+}
+
+#propriete, #profil {
+    margin-left: 40px;
+}
+
+#intervention, #comptabilite {
+    margin-left: 50px;
+}
+
+#locataire {
+    margin-left: 35px;
+}
+
+input {
+    width: 500px;
+    height: 20px;
+    background: #4f6bf3;
+    margin: auto;
+    color: white;
+}
+
+::placeholder {
+    color: white;
+}
+
+#barre-recherche {
+    width: 500px;
+    height: 20px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+#menu img:hover {
+    cursor: pointer;
+}

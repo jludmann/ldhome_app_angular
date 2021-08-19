@@ -1,0 +1,48 @@
+<div id="infos">
+    <div class="info">
+        <p class="titre">Informations</p><br>
+        <div>
+            <p>Nom : </p>
+            <p>{{proprietaire.nom}}</p>
+        </div>
+        <div>
+            <p>Prénom : </p>
+            <p>{{proprietaire.prenom}}</p>
+        </div>
+        <div>
+            <img *ngIf="proprietaire.sexe === 'Homme'" [src]="urlSymboleHomme" alt="Symbole homme" width="50px" height="50px">
+            <img *ngIf="proprietaire.sexe === 'Femme'" [src]="urlSymboleFemme" alt="Symbole femme" width="50px" height="75px">
+        </div>
+        <div>
+            <p>Adresse : </p>
+            <p>{{proprietaire.adresse}}</p>
+        </div>
+        <div>
+            <p>Code Postal : </p>
+            <p>{{proprietaire.codePostal}}</p>
+        </div>
+        <div>
+            <p>Ville : </p>
+            <p>{{proprietaire.ville}}</p>
+        </div>
+        <div>
+            <p>Pays : </p>
+            <p>{{proprietaire.pays}}</p>
+        </div>
+        <div>
+            <p>Tél. : </p>
+            <p>{{proprietaire.telephone}}</p>
+        </div>
+        <div>
+            <p>Mail : </p>
+            <p>{{proprietaire.mail}}</p>
+        </div>
+        <div>
+            <p>Profession : </p>
+            <p>{{proprietaire.profession}}</p></div>
+        </div>
+    <div class="info">
+        <p id="type">Propriétaire</p>
+        <img id="photoProfil"[src]="urlDefaultProfilePicture" alt="Photo de profil par défaut" width="400px" height="400px">
+    </div>
+</div>

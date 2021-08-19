@@ -1,0 +1,100 @@
+#logement thead {
+    background-color: #4f6bf3;
+    color: white;
+}
+
+#logement thead td {
+    border: solid 2px #4f6bf3;
+}
+
+td {
+    text-align: center;
+}
+
+#logement {
+    border-collapse: collapse;
+    width: 100%;
+    margin: auto;
+    font-family: "Alice-Regular";
+    margin-bottom: 25px;
+}
+
+.dot {
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    margin: auto;
+}
+
+#occupe {
+    background-color: green;
+}
+
+#nonoccupe {
+    background-color: red;
+}
+
+#listePieces {
+    width: 55%;
+    font-family: "Alice-Regular";
+}
+
+#listePieces thead {
+    font-weight: bold;
+    font-size: large;
+}
+
+#cle {
+    display: flex;
+    flex-direction: row;
+    width: 45%;
+    margin: auto;
+    justify-content: center;
+}
+
+.ligne {
+    display: flex;
+    flex-direction: row;
+}
+
+li {
+    font-weight: bold;
+    font-size: large;
+    font-family: 'Alice-Regular';
+}
+
+ul {
+    padding-top: 5%;
+}
+
+.photo {
+    width: 25%;
+    margin-top: 5%;
+    border: solid 2px black;
+    height: 150px;
+}
+
+.titre {
+    font-family: 'Great Vibes';
+    color: #8c41f9;
+    width: fit-content;
+    font-size: 5em;
+    margin: auto;
+}
+
+#documents, #contrats {
+    width: 50%;
+    margin-top: 5%;
+}
+
+#documents ul, #contrats ul {
+    border: 4px double #4f6bf3;
+    width: fit-content;
+    margin: 2.5% auto;
+    padding-right: 2.5%;
+    padding-top: 0;
+}
+
+#documents li:hover, #contrats li:hover {
+    cursor: pointer;
+}
