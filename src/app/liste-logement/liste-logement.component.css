@@ -5,13 +5,12 @@ table {
     margin: auto;
 }
 
-thead {
+th {
     background: #242d5c;
     color: white;
 }
 
-
-tr, td {
+tr, th {
     text-align: center;
 }
 
@@ -24,10 +23,12 @@ tr, td {
 
 #occupe {
     background-color: green;
+    color: green;
 }
 
 #nonoccupe {
     background-color: red;
+    color: red;
 }
 
 #locataire:hover, #adresse:hover {
@@ -40,4 +41,16 @@ tr:nth-child(odd) {
 
 tr:nth-child(even) {
     background: lightgrey;
+}
+
+.mat-column-occupe, .mat-column-typeLogemnt, .mat-column-surface, .mat-column-nbPersonnes, .mat-column-etage {
+    width: 2%;
+}
+
+.mat-column-dateSortie, .mat-column-locataire, .mat-column-proprietaire, .mat-column-adresse, .mat-column-ville, .mat-column-quartier {
+    width: 10%;
+}
+
+.mat-column-loyer, .mat-column-sommeCharges, .mat-column-total, .mat-column-codePostal {
+    width: 5%;
 }

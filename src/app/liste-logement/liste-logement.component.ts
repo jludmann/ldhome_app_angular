@@ -20,9 +20,8 @@ export class ListeLogementComponent implements OnInit {
   private souscription: Subscription | undefined;
   public listeLogement: any;
   sortedData: Logement[] = [];
-  @ViewChild(MatSort)
-  sort: MatSort = new MatSort;
-  displayedColumns: string[] = ['occupe', 'dateSortie', 'typeLogement', 'surface', 'etage', 'nbPersonnes', 'ville', 'quartier', 'adresse', 'codePostal', 'loyer', 'sommeCharges', 'total', 'locataire.nom', 'proprietaire.nom'];
+  @ViewChild(MatSort) sort: MatSort = new MatSort;
+  displayedColumns: string[] = ['occupe', 'dateSortie', 'typeLogement', 'surface', 'etage', 'nbPersonnes', 'ville', 'quartier', 'adresse', 'codePostal', 'loyer', 'sommeCharges', 'total', 'locataire', 'proprietaire'];
 
 
   constructor(private logementService: LogementService, private locataireService: LocataireService, private router: Router) { }
