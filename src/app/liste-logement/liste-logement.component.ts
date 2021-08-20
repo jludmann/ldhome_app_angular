@@ -4,6 +4,7 @@ import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
+import { Locataire } from '../model/locataire';
 import { Logement } from '../model/logement';
 import { LocataireService } from '../services/locataire.service';
 import { LogementService } from '../services/logement.service';
@@ -49,5 +50,22 @@ export class ListeLogementComponent implements OnInit {
     this.router.navigate(['utilisateur/logement']);
     this.logementService.updateLogement(idLogement);
   }
-}
 
+  getColor(locataire: Locataire): string {
+    if (locataire == null) {
+      return '#242d5c';
+    }
+
+    else if (locataire.sexe === 'Homme') {
+      return 'blue';
+    }
+
+    else if (locataire.sexe === 'Femme'){
+      return 'rgb(252, 95, 121)'
+    }
+
+    else {
+      return '#242d5c'
+    }
+  }
+}

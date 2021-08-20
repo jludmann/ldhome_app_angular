@@ -10,7 +10,20 @@ th {
     color: white;
 }
 
-tr, th {
+.homme {
+    color: blue;
+}
+
+.femme {
+    color: rgb(252, 95, 121);
+}
+
+::ng-deep .mat-sort-header-container {
+    display:flex;
+    justify-content:center;
+  }
+
+tr{
     text-align: center;
 }
 
@@ -36,7 +49,7 @@ tr, th {
 }
 
 tr:nth-child(odd) {
-    background: #2998db;
+    background: skyblue;
 }
 
 tr:nth-child(even) {
